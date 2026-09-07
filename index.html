@@ -4,41 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        div {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #000000, #808080);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+            background-color: #808080;
+            color: white;
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            font-size: 18px;
+            margin: 3px;
+            background-color: #808080;
+        }
+
+        .clear-btn {
+            width: 150px;
+            background-color: #ffffff;
+            color: black;
+            background-color: rgba(253, 25, 0, 0.785);
+        }
+
+        .operations {
+            background-color: #c97900;
+            color: rgb(0, 0, 0);
+        }
+    </style>
 </head>
 <body>
-    <h1>Simple Calculator</h1>
+    <div>
+        <h1>Simple Calculator</h1>
 
-    <input type="text" id="display" readonly>
-    <br><br>
+        <input type="text" id="display" readonly>
+        <br><br>
 
-    <button onclick=""> 7 </button>
-    <button onclick=""> 8 </button>
-    <button onclick=""> 9 </button>
-    <button onclick=""> ÷ </button>
+        <button onclick=""> 7 </button>
+        <button onclick=""> 8 </button>
+        <button onclick=""> 9 </button>
+        <button class="operations" onclick=""> ÷ </button>
 
-    <br>
+        <br>
 
-    <button onclick=""> 4 </button>
-    <button onclick=""> 5 </button>
-    <button onclick=""> 6 </button>
-    <button onclick=""> x </button>
+        <button onclick=""> 4 </button>
+        <button onclick=""> 5 </button>
+        <button onclick=""> 6 </button>
+        <button class="operations" onclick=""> x </button>
 
-    <br>
+        <br>
 
-    <button onclick=""> 1 </button>
-    <button onclick=""> 2 </button>
-    <button onclick=""> 3 </button>
-    <button onclick=""> - </button>
+        <button onclick=""> 1 </button>
+        <button onclick=""> 2 </button>
+        <button onclick=""> 3 </button>
+        <button class="operations" onclick=""> - </button>
 
-    <br>
+        <br>
 
-    <button onclick=""> 0 </button>
-    <button onclick=""> . </button>
-    <button onclick=""> = </button>
-    <button onclick=""> + </button>
+        <button onclick=""> 0 </button>
+        <button onclick=""> . </button>
+        <button class="operations" onclick=""> = </button>
+        <button class="operations" onclick=""> + </button>
 
-    <br>
+        <br>
 
-    <button onclick=""> Clear </button>
+        <button class="clear-btn" onclick=""> Clear </button>
+    </div>
 </body>
 </html>
