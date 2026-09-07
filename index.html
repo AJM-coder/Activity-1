@@ -62,35 +62,60 @@
         <input type="text" id="display" readonly>
         <br><br>
 
-        <button onclick=""> 7 </button>
-        <button onclick=""> 8 </button>
-        <button onclick=""> 9 </button>
-        <button class="operations" onclick=""> ÷ </button>
+        <button onclick="add('7')"> 7 </button>
+        <button onclick="add('8')"> 8 </button>
+        <button onclick="add('9')"> 9 </button>
+        <button class="operations" onclick="add('/')"> ÷ </button>
 
         <br>
 
-        <button onclick=""> 4 </button>
-        <button onclick=""> 5 </button>
-        <button onclick=""> 6 </button>
-        <button class="operations" onclick=""> x </button>
+        <button onclick="add('4')"> 4 </button>
+        <button onclick="add('5')"> 5 </button>
+        <button onclick="add('6')"> 6 </button>
+        <button class="operations" onclick="add('*')"> x </button>
 
         <br>
 
-        <button onclick=""> 1 </button>
-        <button onclick=""> 2 </button>
-        <button onclick=""> 3 </button>
-        <button class="operations" onclick=""> - </button>
+        <button onclick="add('1')"> 1 </button>
+        <button onclick="add('2')"> 2 </button>
+        <button onclick="add('3')"> 3 </button>
+        <button class="operations" onclick="add('-')"> - </button>
 
         <br>
 
-        <button onclick=""> 0 </button>
-        <button onclick=""> . </button>
-        <button class="operations" onclick=""> = </button>
-        <button class="operations" onclick=""> + </button>
+        <button onclick="add('0')"> 0 </button>
+        <button onclick="add('.')"> . </button>
+        <button class="operations" onclick="calculate()"> = </button>
+        <button class="operations" onclick="add('+')"> + </button>
 
         <br>
 
-        <button class="clear-btn" onclick=""> Clear </button>
+        <button class="clear-btn" onclick="clearDisplay()"> Clear </button>
     </div>
+
+    <script>
+        let calculated = false;
+
+        function add(value){
+            if(calculated){
+                document.getElementById('display').value = '';
+                calculated = false;
+            }
+
+            document.getElementById('display').value += value;
+        }
+
+        function calculate(){
+            document.getElementById('display').value = 
+                eval(document.getElementById('display').value);
+
+            calculated = true;
+        }
+
+        function clearDisplay(){
+            document.getElementById('display').value = '';
+            calculated = false;
+        }
+    </script>
 </body>
 </html>
