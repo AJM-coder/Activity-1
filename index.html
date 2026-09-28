@@ -14,10 +14,15 @@
 
         div {
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 5px double #ccc;
             padding: 20px;
             border-radius: 10px;
             background: linear-gradient(45deg, #000000, #808080);
+            margin-bottom: 5%;
+        }
+
+        section{
+            font-family: 'Courier New', Courier, monospace;
         }
 
         h1 {
@@ -92,6 +97,16 @@
 
         <button class="clear-btn" onclick="clearDisplay()"> Clear </button>
     </div>
+
+    <section id="about">
+        <h2>About</h2>
+      
+        <p>
+            Simple Calculator © Since 2026 <br>
+            Developer Name: Ajay Quitoriano Mendaros
+        </p>
+      
+    </section>
 
     <script>
         let calculated = false;
